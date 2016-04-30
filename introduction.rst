@@ -5,15 +5,27 @@ Introduction
 .. --------
 .. TODO: add an introduction of the hardware used for the project here
 
+Automatic Dependent Surveillance – Broadcast (ADS-B) provides a method by which aircraft broadcast periodic position information. Aircraft determination technologies include: GNSS receiver to determine horizontal coordinates; barometric determination of altitude.
+
+Physical layer
+--------------
+
+The physical layer relays ADS-B position reports with two link technologies:
+
++ Universal access transceiver
+
++ 1090 MHz extended squitter
+
+  - A squitter refers to random pulses, pulse-pairs and other non-solicited messages used in various aviation radio systems. Squitter pulses are used in DME/TACAN air navigation systems, and because of their randomness, appear the same as unsolicited/unsynchronised replies to other interrogating aircraft. A squitter is used to maintain a regular signal from a ground beacon.
+  
+  - When refering to a Mode S secondary surveillance radar system, 'squitter' describes messages that are unsolicited downlink transmissions from an automatic dependent surveillance-broadcast (ADS-B) Mode S transponder system. Mode S transponders transmit acquisition squitter (unsolicited downlink transmissions) to permit passive acquisition by interrogators with broad antenna beams. In contrast, an active acquisition system may be hindered by all-call synchronous garble.
 
 Mode S
 ------
 
-Mode S is the signal carrying the ADS-B data from aircrafts. Modulation and demodulation of Mode S signal is out of scope of this guide. From our antenna and  A/D converter, we are able to receive the encoded messages to a Linux agent. Our focuses are from this point on; working with those data.
+A Mode S signal carries the ADS-B message from an aircraft. An antenna and  A/D converter enabels reception of encoded mode S  messages to a Linux agent. The focus of this guide provides a framework for working with those data.
 
-If you are interested on digging deeper on the Mode S signal, a good starting point is to have a look at this Wikipedia page, and follow the references:
-
-https://en.wikipedia.org/wiki/Secondary_surveillance_radar#Mode_S
+An explaination of Mode S modulation and demodulation lays beyond the scope of this guide, however a starting place for in-depth Mode S signal resources can be found in this Wikapedia article and its references https://en.wikipedia.org/wiki/Secondary_surveillance_radar#Mode_S.
 
 
 ADS-B
